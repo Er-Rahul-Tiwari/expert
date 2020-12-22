@@ -1,0 +1,79 @@
+.topNav {
+  grid-column: full-start / full-end;
+  padding: 0 8rem;
+
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-auto-flow: column;
+  
+  @media only screen and (max-width: $bp-small) {
+    padding: 0 1.5rem;
+  }
+
+  
+
+  &__group {
+    @include centerFlex;
+
+    &--input {
+      border: none;
+      @media only screen and (max-width: $bp-small) {
+        width: 1rem;
+      }
+    }
+  }
+  
+  &__svg {
+    width: 2.4rem;
+  }
+
+  &__img {
+    width: 3rem;
+  }
+  &__logo{
+    text-align: center;
+    font-weight: $weight--700;
+  }
+
+  
+&__list {
+  display: grid;
+  justify-content: start;
+  grid-gap: 1rem;
+  
+  &--icon{
+    grid-auto-flow: column;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    @include padding(1rem, 0, 1rem, 0);
+    grid-column-gap: 1rem;
+  }
+}
+
+  &__link {
+    text-transform: capitalize;
+    font-size: $font--13;
+    font-weight: $weight--600;
+    color: $color-primary;
+  }
+
+  &__cart {
+    text-transform: uppercase;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 1rem;
+
+    &--box {
+      display: grid;
+      align-items: center;
+      grid-auto-flow: column;
+    }
+  }
+
+  &__btn {
+    display: grid;
+    align-self: center;
+    justify-self: start;
+  }
+}

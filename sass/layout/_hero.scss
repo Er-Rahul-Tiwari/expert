@@ -1,0 +1,38 @@
+.heros {
+  grid-column: full-start / full-end;
+  // background-color: $color-primary-1;
+}
+
+.hero {
+  @include grid(5rem);
+  @include padding(0, 10rem, 0, 10rem);
+
+  @media only screen and (max-width: $bp-large) {
+    @include padding(0, 1.5rem, 0, 1.5rem);
+  }
+
+  align-items: center;
+  justify-content: start;
+
+  grid-gap: 2rem;
+
+  &__para {
+    font-size: $font--12;
+  }
+
+  &__picture {
+    // @media only screen and (max-width: $bp-large) {
+    //   grid-column: full-start / full-end;
+
+    //   &--img {
+    //     width: 100%;
+    //   }
+    // }
+
+    &--img {
+      max-width: 100%;
+      border-radius: 1rem;
+      // @include centerFlex;
+    }
+  }
+}

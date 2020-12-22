@@ -1,0 +1,37 @@
+.seller {
+  grid-column: full-start / full-end;
+  background-color: $color-e;
+
+  padding: 6rem 4rem 0 4rem;
+  margin-bottom: 6rem;
+  
+  
+  @media only screen and (max-width: $bp-large) {
+    grid-column: full-start / full-end;
+    padding: 3rem 0 0 0;
+  }
+  &__para {
+    text-align: center;
+    text-transform: capitalize;
+    padding: 1.4rem;
+  }
+}
+
+.cards {
+  margin-top: 2rem;
+}
+
+.card {
+  &__one{
+    grid-column: 1/-1;
+    padding: 1rem;
+  }
+  &__border {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    @media only screen and (max-width: $bp-large) {
+      border-radius: 1rem;
+    }
+  }
+}

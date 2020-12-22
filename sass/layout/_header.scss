@@ -1,0 +1,9 @@
+.header {
+    grid-column: full-start / full-end;
+
+    display: grid;
+  
+  &__img {
+      max-width: 100%;
+    }
+}

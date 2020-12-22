@@ -1,0 +1,59 @@
+.card3 {
+  grid-column: full-start/ full-end;
+  background-color: $color-primary-1;
+  padding: 5rem 14rem;
+  
+  @media only screen and (max-width: $bp-large) {
+    grid-column: full-start / full-end;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+  }
+
+  &__heading{
+    font-weight: $weight--700;
+    color: $color-white;
+  }
+}
+
+.cards {
+  display: grid;
+  @include grid(25rem);
+  grid-gap: 2rem;
+
+  &__gap{
+    grid-gap: 7rem;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.8rem;
+  padding: 1rem;
+  background-color: $color-white;
+  @include boxRadius-4;
+  overflow: hidden;
+  text-align: center;
+
+  &__img {
+    width: 100%;
+    grid-row: 2/3;
+    grid-column: 1 / -1;
+    z-index: 1;
+  }
+
+  &__heading {
+    text-align: left;
+    grid-column: 1 / -1;
+    text-transform: capitalize;
+    font-weight: $weight--700;
+    font-size: $font--20;
+  }
+  &__subHeading {
+    text-align: left;
+    font-weight: $weight--600;
+    font-size: $font--14;
+    color: $color-a;
+    line-height: 1.2;
+  }
+}
